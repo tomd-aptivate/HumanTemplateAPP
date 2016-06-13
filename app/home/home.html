@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+ 
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+ 
+    <title>Raw api calls</title>
+ 
+    <!-- <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="home/home.css">
+    <link href="justified-nav.css" rel="stylesheet">
+ 
+</head>
+ 
+<body ng-controller="HomeCtrl">
+    <div class="container">
+        <form class="form-auth" role="form">
+            <div class="inputdata">
+                <label for="apiKey">apiKey:</label> 
+                <span><input ng-model="apiKey" type="name" class="form-control" id="apiKey" placeholder="apiKey" required="true" autofocus=""></span>
+            </div>
+            <button type="button" ng-click="Auth($event, apiKey)" class="btn btn-lg btn-primary btn-block">Get Auth Token</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <form class="form-humantemplate" role="form">
+            <div class="inputdata"></div>
+            <canvas id="humanTemplate"></canvas>
+            <button type="button" ng-click="HumanTemplate($event)" class="btn btn-lg btn-primary btn-block">Get Image</button>
+        </form>
+    </div>
+
+
+
+    <div class="container">
+        <div class="jumbotron" style="padding-bottom:0px;">
+            <h2>Raw api calls!</h2>
+        </div>
+        <form class="form-lookup" role="form">
+            <div class="inputdata">
+                <label for="PersonName">Person's Name: </label> 
+                <span><input ng-model="person.name" type="name" class="form-control" id="PersonName" placeholder="Person Name" required="" autofocus=""></span>
+            </div>
+            <div class="inputdata">
+                <label for="CaptureId">Capture ID:</label>
+                <span><input ng-model="person.captureid" type="captureid" class="form-control" id="CaptureId" placeholder="Fingerprint capture ID" required=""></span>
+            </div>
+        </label>
+        <div><h1> </h1></div>
+        <button type="button" ng-click="Lookup($event, person)" class="btn btn-lg btn-primary btn-block">Lookup</button>
+      </form>
+ 
+    </div>
+ 
+   
+ 
+</body></html>
