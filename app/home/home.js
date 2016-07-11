@@ -80,6 +80,8 @@ angular.module('myApp.home', ['ngRoute','ngResource'])
         var apiToken = $window.sessionStorage.getItem('token');
         var humanTemplate = humanTemplateFactory.get({'token': apiToken}).$promise;
         humanTemplate.then(function onSuccess(resource){
+            loadTemplate(resource);
+            /*
             console.log(resource.Base64Image);
             var canvas = document.getElementById("humanTemplate");
             var ctx = canvas.getContext("2d");
@@ -88,6 +90,7 @@ angular.module('myApp.home', ['ngRoute','ngResource'])
                     ctx.drawImage(image, 0, 0);
             };
             image.src = "data:image/png;base64," + resource.Base64Image;
+            */
         });
     }
 

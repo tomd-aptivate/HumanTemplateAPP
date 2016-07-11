@@ -12,7 +12,8 @@
     "angular-mocks": "~1.5.5",
     "html5-boilerplate": "~5.2.0",
     "angular-resource": "^1.5.5",
-    "fabric": "1.6.2"
+    "fabric": "1.6.2",
+    "pnglib": "*"
   },
   "resolutions": {
     "angular": "~1.5.5"
